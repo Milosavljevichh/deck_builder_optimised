@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cybies5i5ubun"]
+
+[ext_resource type="Script" path="res://components/card/playing/play_area_component.gd" id="1_u5juy"]
+[ext_resource type="Texture2D" uid="uid://cyuehnq7t2rgk" path="res://assets/prototype/texture_05.png" id="2_5h7ke"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gnne"]
+size = Vector2(560, 150)
+
+[node name="Play_area_component" type="Area2D"]
+script = ExtResource("1_u5juy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.499996, 1.00001)
+scale = Vector2(0.547852, 0.148437)
+texture = ExtResource("2_5h7ke")
+region_rect = Rect2(500, 300, 570, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4gnne")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

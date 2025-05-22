@@ -1,0 +1,2 @@
+extends Entity_component
+class_name Player
