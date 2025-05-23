@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5n6v71hywbrd"]
+[gd_scene load_steps=2 format=3 uid="uid://c5n6v71hywbrd"]
 
 [ext_resource type="Script" path="res://components/entity/entity.gd" id="1_gj0cw"]
-[ext_resource type="PackedScene" uid="uid://chfqxttj2boyt" path="res://components/entity/hand_component.tscn" id="2_imy5h"]
 
 [node name="Entity_component" type="Node2D"]
 script = ExtResource("1_gj0cw")
-
-[node name="Hand_component" parent="." instance=ExtResource("2_imy5h")]

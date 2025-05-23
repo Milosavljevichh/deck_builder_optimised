@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://owflhngteou1"]
+
+[ext_resource type="Script" path="res://resources/card_data.gd" id="1_p4sfw"]
+
+[resource]
+script = ExtResource("1_p4sfw")
+card_name = "Prototype"
+description = "Prototype"
+cost = 0
+damage = 5
+heal = 4
+corruption = 0.0
+card_type = ""
+rarity = ""
+outer_border_image_path = ""
+inner_border_image_path = ""
+background_image_path = ""
+text_background_image_path = ""
+effect_id = ""

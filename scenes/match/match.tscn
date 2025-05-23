@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm8ncikf847gp"]
+[gd_scene load_steps=5 format=3 uid="uid://dm8ncikf847gp"]
 
 [ext_resource type="Script" path="res://scenes/match/match.gd" id="1_nb4nq"]
+[ext_resource type="PackedScene" uid="uid://cybies5i5ubun" path="res://components/card/playing/play_area_component.tscn" id="2_ny5cm"]
+[ext_resource type="PackedScene" uid="uid://s808j4exjghp" path="res://scenes/match_entity/player/player.tscn" id="3_dxrwc"]
+[ext_resource type="PackedScene" uid="uid://fx108nhvqohy" path="res://components/entity/basic_enemy.tscn" id="4_efgok"]
 
-[node name="Match" type="Node2D"]
+[node name="Match" type="Node2D" node_paths=PackedStringArray("play_area", "player")]
 script = ExtResource("1_nb4nq")
+play_area = NodePath("Play_area_component")
+player = NodePath("Player")
+
+[node name="Play_area_component" parent="." instance=ExtResource("2_ny5cm")]
+position = Vector2(654, 321)
+
+[node name="Player" parent="." instance=ExtResource("3_dxrwc")]
+
+[node name="debugging" type="CanvasLayer" parent="."]
+
+[node name="phase" type="Label" parent="debugging"]
+offset_left = 58.0
+offset_top = 39.0
+offset_right = 98.0
+offset_bottom = 62.0
+
+[node name="Basic_enemy" parent="." instance=ExtResource("4_efgok")]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://fx108nhvqohy"]
+
+[ext_resource type="Script" path="res://components/entity/basic_enemy.gd" id="1_k0rh7"]
+[ext_resource type="PackedScene" uid="uid://chfqxttj2boyt" path="res://components/entity/hand_component.tscn" id="2_yhj8k"]
+[ext_resource type="PackedScene" uid="uid://cceohxs84pa3o" path="res://components/health_component/health_component.tscn" id="3_0rd74"]
+[ext_resource type="PackedScene" uid="uid://b6s4xtkd7jbdj" path="res://components/deck/deck.tscn" id="4_dd761"]
+
+[node name="Basic_enemy" type="Node2D" node_paths=PackedStringArray("health_component", "deck")]
+script = ExtResource("1_k0rh7")
+health_component = NodePath("Health_component")
+deck = NodePath("Deck")
+
+[node name="Hand_component" parent="." instance=ExtResource("2_yhj8k")]
+
+[node name="Health_component" parent="." instance=ExtResource("3_0rd74")]
+max_health = 100
+
+[node name="Deck" parent="." instance=ExtResource("4_dd761")]

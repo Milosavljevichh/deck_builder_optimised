@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://s808j4exjghp"]
+[gd_scene load_steps=5 format=3 uid="uid://s808j4exjghp"]
 
 [ext_resource type="Script" path="res://scenes/match_entity/player/player.gd" id="1_dhped"]
+[ext_resource type="PackedScene" uid="uid://chfqxttj2boyt" path="res://components/entity/hand_component.tscn" id="2_02y7n"]
+[ext_resource type="PackedScene" uid="uid://b6s4xtkd7jbdj" path="res://components/deck/deck.tscn" id="3_y4ax7"]
+[ext_resource type="PackedScene" uid="uid://cceohxs84pa3o" path="res://components/health_component/health_component.tscn" id="4_d4twi"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" node_paths=PackedStringArray("health_component", "deck")]
 script = ExtResource("1_dhped")
+health_component = NodePath("Health_component")
+deck = NodePath("Deck")
+
+[node name="Hand_component" parent="." instance=ExtResource("2_02y7n")]
+
+[node name="Deck" parent="." instance=ExtResource("3_y4ax7")]
+
+[node name="Health_component" parent="." instance=ExtResource("4_d4twi")]
+max_health = 100

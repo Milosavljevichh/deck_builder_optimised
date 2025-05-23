@@ -4,6 +4,8 @@ class_name CardData
 @export var card_name: String
 @export var description: String
 @export var cost: int
+@export var damage: int
+@export var heal: int
 @export var corruption: float
 @export var card_type: String # "attack", "defense", "spell"
 @export var rarity: String # "common", "rare", "corrupted"

@@ -9,7 +9,7 @@ size = Vector2(560, 150)
 [node name="Play_area_component" type="Area2D"]
 script = ExtResource("1_u5juy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="field" type="Sprite2D" parent="."]
 position = Vector2(-0.499996, 1.00001)
 scale = Vector2(0.547852, 0.148437)
 texture = ExtResource("2_5h7ke")

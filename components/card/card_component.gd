@@ -1,13 +1,23 @@
 extends Control
 class_name Card_component
 
-#TODO:
-#make a 'draggable_component' which ensures the card can be dragged around
-#make a 'dropbox_component' which checks if the card is dropped in a playing field
-#make a 'card_ui_component' which loads up all the visuals
-#add a play() function for adding into queue
-
 @export var draggable_component : Draggable_component
+@export var ui_component: Card_ui
+@export var damage : int
+@export var heal : int
+
+var damage_target : Basic_enemy
+var heal_target : Player
 
 func play():
-	pass
+#	postojace kartice koje i healuju i damage-uju
+	if damage:
+		damage_target.health_component.take_damage(damage)
+	if heal:
+		heal_target.health_component.heal(heal)
+
+func discard():
+	return
+
+func _on_draggable_component_is_played():
+	pass # Replace with function body.
