@@ -15,9 +15,11 @@ func play():
 		damage_target.health_component.take_damage(damage)
 	if heal:
 		heal_target.health_component.heal(heal)
+	
 
 func discard():
 	return
 
 func _on_draggable_component_is_played():
-	pass # Replace with function body.
+	#play()
+	queue_free()

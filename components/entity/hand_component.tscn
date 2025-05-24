@@ -53,6 +53,7 @@ layout_mode = 2
 [node name="card_display" type="HBoxContainer" parent="CanvasLayer/Hand/Cosmetic_wrapper/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/separation = 180
 
 [node name="proceed" type="Button" parent="CanvasLayer/Hand/Cosmetic_wrapper"]
