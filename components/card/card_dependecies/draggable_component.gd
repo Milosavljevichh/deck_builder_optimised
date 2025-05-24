@@ -3,7 +3,7 @@ class_name Draggable_component
 
 signal Is_played
 signal Is_selected(card:Card_component)
-signal Is_dropped
+signal Is_dropped(card:Card_component)
 
 var is_hovered:bool = false
 var is_dragging:bool = false
@@ -23,7 +23,6 @@ func _input(event):
 		if Input.is_action_pressed("normal_click"):
 			if !is_dragging:
 				Is_selected.emit(get_parent())
-			is_dragging = true
 	if Input.is_action_just_released("normal_click"):
 		if is_dragging:
 			is_dragging = false
