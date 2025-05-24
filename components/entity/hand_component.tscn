@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_nwoew")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -16,13 +17,13 @@ script = ExtResource("1_nwoew")
 [node name="Hand" type="Control" parent="CanvasLayer"]
 custom_minimum_size = Vector2(0, 330)
 layout_mode = 3
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 size_flags_horizontal = 3
+mouse_filter = 1
 
 [node name="Cosmetic_wrapper" type="Control" parent="CanvasLayer/Hand"]
 custom_minimum_size = Vector2(0, 255)
@@ -30,9 +31,11 @@ layout_mode = 1
 anchor_top = 0.149
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 199.985
+offset_top = 336.72
+offset_bottom = 2.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+mouse_filter = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Hand/Cosmetic_wrapper"]
 layout_mode = 1

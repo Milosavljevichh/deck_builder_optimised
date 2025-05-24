@@ -2,6 +2,8 @@ extends Area2D
 class_name Draggable_component
 
 signal Is_played
+signal Is_selected(card:Card_component)
+signal Is_dropped
 
 var is_hovered:bool = false
 var is_dragging:bool = false
@@ -19,6 +21,8 @@ func _input(event):
 		if Input.is_action_just_pressed("normal_click"):
 			last_position = card.global_position
 		if Input.is_action_pressed("normal_click"):
+			if !is_dragging:
+				Is_selected.emit(get_parent())
 			is_dragging = true
 	if Input.is_action_just_released("normal_click"):
 		if is_dragging:
@@ -26,8 +30,9 @@ func _input(event):
 			if is_playable:
 				Is_played.emit()
 			else:
-				card.global_position = last_position
-				last_position = card.global_position
+				#card.global_position = last_position
+				#last_position = card.global_position
+				Is_dropped.emit(get_parent())
 
 func _on_mouse_entered():
 	is_hovered = true
