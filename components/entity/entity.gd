@@ -11,7 +11,7 @@ signal End_turn
 
 func draw_card(amount: int):
 	if amount:
-		if hand_component.cards_in_hand.size() < 6:
+		if hand_component.card_display.get_children().size() < 6:
 			for i in range(0, amount):
 				hand_component.add_to_hand(deck.draw_from_deck())
 	else:
