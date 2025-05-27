@@ -14,3 +14,5 @@ class_name CardData
 @export var background_image_path: String
 @export var text_background_image_path: String
 @export var effect_id: String # Used for gameplay effect logic
+var damage_target:Entity_component
+var heal_target:Entity_component

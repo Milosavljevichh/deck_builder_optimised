@@ -15,6 +15,10 @@ var hand_occupied = false
 
 func add_to_hand(data: CardData):
 	var card = CARD_SCENE.instantiate()
+	card.damage_target = data.damage_target
+	card.heal_target = data.heal_target
+	card.damage = data.damage
+	card.heal = data.heal
 	card.draggable_component.Is_selected.connect(hold_card)
 	card.ui_component.set_up_ui(data)
 	card_display.add_child(card)

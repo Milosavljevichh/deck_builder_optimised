@@ -17,6 +17,9 @@ func add_to_deck(card: CardData):
 #	funkcija za dodavanje kartica u sam spil
 	deck.push_back(card)
 
-func draw_from_deck():
+func draw_from_deck(player:Entity_component, enemy: Entity_component):
 #	returnovace kartu
-	return deck.pick_random()
+	var rand_card : CardData = deck.pick_random()
+	rand_card.heal_target = player
+	rand_card.damage_target = enemy
+	return rand_card

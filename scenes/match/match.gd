@@ -1,4 +1,5 @@
 extends Node2D
+class_name Match_manager
 
 #debugging
 @onready var phase = $debugging/phase

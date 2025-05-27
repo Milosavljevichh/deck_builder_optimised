@@ -15,4 +15,4 @@ deck = NodePath("Deck")
 [node name="Deck" parent="." instance=ExtResource("3_y4ax7")]
 
 [node name="Health_component" parent="." instance=ExtResource("4_d4twi")]
-max_health = 100
+max_health = 90
